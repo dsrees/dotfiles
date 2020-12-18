@@ -1,0 +1,50 @@
+# /Users/drees/.config/tmuxinator/dev.yml
+name: dev
+root: ~/dev/clustertruck
+windows:
+  - mobile:
+      layout: even-vertical
+      panes:
+        - ios:
+          - cd consumer-ios
+          - clear
+        - android:
+          - cd consumer-android
+          - clear
+  - api:
+      layout: even-vertical
+      panes:
+        - api:
+          - cd api
+          - clear
+        - salt:
+          - cd salt
+          - clear
+  - murphy:
+      layout: even-vertical
+      panes:
+        - shell:
+            - cd murphy
+            - clear
+        - iex:
+            - cd murphy
+            - iex -S mix phx.server
+  - web:
+      layout: even-vertical
+      panes:
+        - web:
+          - cd consumer-web-react
+          - npm start
+        - ops:
+          - cd ops-app
+          - npm start
+  - teams:
+      layout: main-horizontal
+      panes:
+        - server:
+          - cd teams
+          - PORT=8100 iex --name team_app01@localhost --cookie KmBlI3j8ywgaMAVHHg+gcD6iLZ2rXhCgUkCMT+oHUlbEUqnmsVzuSixccuSqhU4 -S mix phx.server
+        - ngrok:
+          - cd teams
+          - ngrok http --subdomain=ctoctan 8100
+  - shell:

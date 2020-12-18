@@ -14,6 +14,14 @@ alias gp='git push origin HEAD'
 # Remove `+` and `-` from start of diff lines; just rely upon color.
 alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
 
+
+alias gdiffh="git diff HEAD"
+alias grh="git reset --hard HEAD"
+alias gdiffh="git diff HEAD"
+alias gbase="git rebase -i"
+alias gprune="git remote prune origin"
+
+alias grh='git reset --hard HEAD'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
