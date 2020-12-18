@@ -10,3 +10,5 @@ ZSH=$HOME/.oh-my-zsh
 plugins=(git asdf zsh-syntax-highlighting kubectl)
 
 source $ZSH/oh-my-zsh.sh
+
+. ~/.asdf/plugins/java/set-java-home.zsh

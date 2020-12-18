@@ -13,6 +13,8 @@ brew 'libxslt'
 brew 'libtool'
 brew 'unixodbc'
 brew 'gettext'
+brew 'wxmac'
+brew 'gnupg'
 
 
 # Git helpers
