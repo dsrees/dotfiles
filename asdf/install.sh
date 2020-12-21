@@ -14,4 +14,13 @@ if ! [[ -d ~/.asdf ]]; then
   asdf plugin-add java https://github.com/halcyon/asdf-java.git
   asdf install java openjdk-15
   asdf global java openjdk-15
+
+  asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+  adsf install ruby 2.7.2
+  asdf global ruby 2.7.2
+
+  gem install bunder
+  gem install cocoapods
 fi
