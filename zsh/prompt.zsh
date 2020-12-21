@@ -54,19 +54,12 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%~%{$reset_color%}"
 }
 
-battery_status() {
-  if test ! "$(uname)" = "Darwin"
-  then
-    exit 0
-  fi
-
-  if [[ $(sysctl -n hw.model) == *"Book"* ]]
-  then
-    $DOTFILES/bin/battery-status
-  fi
+user_host() {
+  echo "%{$fg_bold[red]%}%n%{$reset_color%}%{$white%} at %{$fg_bold[yellow]%}%m%{$reset_color%} %{$white%}in"
 }
 
-export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n› '
+
+export PROMPT=$'\n$(user_host) $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
