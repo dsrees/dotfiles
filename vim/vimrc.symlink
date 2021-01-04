@@ -1,4 +1,68 @@
-syntax on
+if !1 | finish | endif
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+"" Plugs
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
+Plug 'elixir-editors/vim-elixir'
+Plug 'Valloric/YouCompleteMe'
+Plug 'mileszs/ack.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'slashmili/alchemist.vim'
+call plug#end()
+
+
+"" Categorize
+set nocompatible                " choose no compatibility with legacy vi
+syntax enable
+set encoding=utf-8
+set showcmd			                " display incomplete commands
+
+"" Whitespace
+set nowrap			                " don't wrap lines
+set tabstop=2 shiftwidth=2	    " a tab is two spaces (or set this to 4)
+set expandtab			              " use spaces, not tabs
+set backspace=indent,eol,start	" backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matching
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive
+set smartcase                   " ... unless they contain at least one capital letter
+set laststatus=2
+
+"" Theming
+colorscheme gruvbox
+set guifont=Menlo:h14
+set background=dark
+set relativenumber
+set number
+:set colorcolumn=100
+:set smartindent
+:set expandtab
+
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+"" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='luna'
+let g:airline#extensions#tabline#enabled = 1
+
+" NERDTree
+let g:NERDTreeWinPos = "left"
+map <Leader>n :NERDTreeToggle<CR>
+
+"" CrtlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|bower_components\|deps\|_build\|docs\|.*\.meta'
+
