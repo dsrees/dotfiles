@@ -27,7 +27,6 @@ cask 'iterm2'
 
 # Other Utilities
 brew 'haproxy'
-brew 'macvim'
 cask 'ngrok'
 
 # Shell utilities

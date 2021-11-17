@@ -53,3 +53,9 @@ eval $(thefuck --alias)
 
 # CTEngineering: Load profile
 . ~/.ct-engineering/load-profile.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+# added by travis gem
+[ ! -s /Users/dsrees/.travis/travis.sh ] || source /Users/dsrees/.travis/travis.sh
