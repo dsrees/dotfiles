@@ -4,6 +4,13 @@ export DOTFILES=$HOME/.dotfiles
 # home dir of all dev projects
 export DEVHOME=~/dev/clustertruck
 
+# Work around until 3.32 released of thefuck
+# https://github.com/nvbn/thefuck/issues/1219#issuecomment-885725319
+export THEFUCK_PRIORITY="git_hook_bypass=1100"
+
+export FLYCTL_INSTALL=$HOME/.fly
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -59,3 +66,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 # added by travis gem
 [ ! -s /Users/dsrees/.travis/travis.sh ] || source /Users/dsrees/.travis/travis.sh
+
+# z - jump around
+. ~/dev/tools/z.sh
+

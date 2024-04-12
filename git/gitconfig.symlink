@@ -37,5 +37,6 @@
 [user]
 	name = dsrees
 	email = daniel.rees18@gmail.com
+	signingkey = EFE0BFD04C2B12D9
 [pull]
 	ff = only
