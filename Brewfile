@@ -13,7 +13,7 @@ brew 'libxslt'
 brew 'libtool'
 brew 'unixodbc'
 brew 'gettext'
-brew 'wxmac'
+brew 'wxwidgets'
 brew 'gnupg'
 
 
