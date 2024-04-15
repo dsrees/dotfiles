@@ -19,10 +19,8 @@ brew 'gnupg'
 
 # Git helpers
 brew 'git'
-brew 'git-flow'
 
 # Programs
-cask 'atom'
 cask 'iterm2'
 
 # Other Utilities
@@ -33,4 +31,3 @@ cask 'ngrok'
 brew 'thefuck'
 brew 'zsh'
 brew 'zsh-completions'
-brew 'tmux'
