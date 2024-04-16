@@ -37,7 +37,8 @@ cask 'tuple'
 cask 'tailscale'
 cask 'notion'
 cask 'rectangle'
-
+cask 'visual-studio-code'
+cask 'linear-linear'
 
 
 # Shell utilities
