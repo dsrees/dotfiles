@@ -58,6 +58,9 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 [ ! -s /Users/dsrees/.travis/travis.sh ] || source /Users/dsrees/.travis/travis.sh
 
 
+# Set JAVA_HOME
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 # asdf - version manager
 . "$HOME/.asdf/asdf.sh"
 
