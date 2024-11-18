@@ -40,7 +40,7 @@ cask 'rectangle'
 cask 'visual-studio-code'
 cask 'linear-linear'
 cask 'postman'
-
+cask 'dash'
 
 # Shell utilities
 brew 'thefuck'
