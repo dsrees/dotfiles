@@ -58,7 +58,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 [ ! -s /Users/dsrees/.travis/travis.sh ] || source /Users/dsrees/.travis/travis.sh
 
 
-# Set JAVA_HOME
+# # Set JAVA_HOME
 . ~/.asdf/plugins/java/set-java-home.zsh
 
 # asdf - version manager
@@ -70,7 +70,3 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)

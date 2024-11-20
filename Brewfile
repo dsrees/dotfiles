@@ -20,27 +20,29 @@ brew 'wxwidgets'
 brew 'gnupg'
 brew 'unzip'
 brew 'curl'
+brew 'postgresql@15'
+brew 'pyenv'
+brew 'neovim'
 
 # Git helpers
 brew 'git'
 
 # Programs
 cask 'iterm2'
-brew 'neovim'
-brew 'postgresql@15'
-
-# Other Utilities
-brew 'haproxy'
-cask 'ngrok'
+cask 'postman'
+cask 'dash'
+cask 'alfred'
+cask 'zoom'
 cask 'spotify'
 cask 'tuple'
-cask 'tailscale'
 cask 'notion'
 cask 'rectangle'
 cask 'visual-studio-code'
-cask 'linear-linear'
-cask 'postman'
-cask 'dash'
+cask 'slack'
+cask 'obsidian'
+
+# Other Utilities
+cask 'ngrok'
 
 # Shell utilities
 brew 'thefuck'
@@ -48,3 +50,4 @@ brew 'zsh'
 brew 'zsh-completions'
 brew 'caddy'
 brew 'swiftformat'
+brew 'xcodes'

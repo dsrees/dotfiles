@@ -33,3 +33,5 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Autohide the dock when the mouse is not over it
+defaults write com.apple.dock "autohide" -bool "true"
