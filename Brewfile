@@ -40,6 +40,7 @@ cask 'rectangle'
 cask 'visual-studio-code'
 cask 'slack'
 cask 'obsidian'
+cask 'contexts'
 
 # Other Utilities
 cask 'ngrok'
